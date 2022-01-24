@@ -17,6 +17,26 @@ namespace ContactsApp
         private string _surname;
 
         /// <summary>
+        /// поле класса Имя
+        /// </summary>
+        private string _name;
+
+        /// <summary>
+        /// поле класса Дата рождения
+        /// </summary>
+        private DateTime _dateOfBirth;
+
+        /// <summary>
+        /// поле класса ID VK
+        /// </summary>
+        private string _idVK;
+
+        /// <summary>
+        /// поле класса Почта
+        /// </summary>
+        private string _email;
+
+        /// <summary>
         /// Ограничение фамилии контакта в 50 символов
         /// </summary>
         public string Surname
@@ -34,11 +54,6 @@ namespace ContactsApp
                 _surname = value;
             }
         }
-
-        /// <summary>
-        /// поле класса Имя
-        /// </summary>
-        private string _name;
 
         /// <summary>
         /// Ограничение имени в 50 символов
@@ -60,16 +75,13 @@ namespace ContactsApp
         }
 
         /// <summary>
-        /// поле класса Дата рождения
-        /// </summary>
-        private DateTime _dateOfBirth;
-
-        /// <summary>
         /// Метод, устанавливающий и возвращающий дату рождения контакта.
         /// </summary>
         public DateTime DateOfBirth
         {
-            get { return _dateOfBirth; }
+            get { 
+                return _dateOfBirth; 
+            }
             set
             {
                 DateTime curDate = DateTime.Now;
@@ -83,11 +95,6 @@ namespace ContactsApp
                 }
             }
         }
-
-        /// <summary>
-        /// поле класса ID VK
-        /// </summary>
-        private string _idVK;
 
         /// <summary>
         /// Ограничение ID VК  15 символов
@@ -110,11 +117,6 @@ namespace ContactsApp
                 }
             }
         }
-
-        /// <summary>
-        /// поле класса Почта
-        /// </summary>
-        private string _email;
 
         /// <summary>
         /// Почта ограничена 50-ю символами
@@ -176,9 +178,5 @@ namespace ContactsApp
         {
             return new PhoneContact (phoneNumber.Number, Name, Surname, Email, DateOfBirth, idVK);
         }
-
-
-
     }
-
 }
